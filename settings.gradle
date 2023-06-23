@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "vt6002cem_227019175_cw2"
+rootProject.name = "vt6002cem_227019175_classwork2"
 include ':app'

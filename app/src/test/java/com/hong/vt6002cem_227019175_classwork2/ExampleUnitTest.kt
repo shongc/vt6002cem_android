@@ -1,4 +1,4 @@
-package com.hong.vt6002cem_227019175_cw2
+package com.hong.vt6002cem_227019175_classwork2
 
 import org.junit.Test
 
