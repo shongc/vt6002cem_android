@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="@string/nav_home"  />
+    <item
+        android:id="@+id/map"
+        android:icon="@drawable/baseline_map_24"
+        android:title="@string/nav_maps" />
+    <item
+        android:id="@+id/camera"
+        android:icon="@drawable/baseline_camera_alt_24"
+        android:title="@string/nav_camera" />
+    <item
+        android:id="@+id/compass"
+        android:icon="@drawable/compass_logo"
+        android:title="@string/nav_compass" />
+</menu>
