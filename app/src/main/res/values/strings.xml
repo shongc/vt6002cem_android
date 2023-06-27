@@ -17,5 +17,8 @@
     <string name="nav_maps">Maps</string>
     <string name="nav_camera">Camera</string>
     <string name="nav_compass">Compass</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_maps">Haunted House Maps</string>
+    <string name="loading_message">loading</string>
 
 </resources>

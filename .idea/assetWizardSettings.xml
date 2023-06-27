@@ -332,7 +332,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/map/baseline_map_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/my_location/baseline_my_location_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -342,9 +342,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="compass" />
-                            <entry key="sourceFile" value="C:\Users\hong\Downloads\compass.svg" />
+                            <entry key="outputName" value="baseline_my_location_24" />
+                            <entry key="sourceFile" value="C:\Users\hong\Downloads\ghosticon2.svg" />
                           </map>
                         </option>
                       </PersistentState>

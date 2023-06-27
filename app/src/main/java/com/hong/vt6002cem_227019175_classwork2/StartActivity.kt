@@ -13,7 +13,7 @@ class StartActivity : AppCompatActivity() {
         startActivity(intent)
 
 
-        setContentView(R.layout.fragment_compass)
+        setContentView(R.layout.activity_bottom_navigation)
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

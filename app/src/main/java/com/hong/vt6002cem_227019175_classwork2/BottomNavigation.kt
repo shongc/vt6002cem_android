@@ -32,8 +32,8 @@ class BottomNavigation : AppCompatActivity() {
                     loadFragment(CompassFragment())
                     true
                 }
-                R.id.camera -> {
-                    loadFragment(CameraFragment())
+                R.id.fsitem -> {
+                    loadFragment(FengShuiItemFragment())
                     true
                 }
                 else -> {

@@ -6,10 +6,10 @@
         android:title="@string/nav_home"  />
     <item
         android:id="@+id/map"
-        android:icon="@drawable/baseline_map_24"
+        android:icon="@drawable/ghosticon"
         android:title="@string/nav_maps" />
     <item
-        android:id="@+id/camera"
+        android:id="@+id/fsitem"
         android:icon="@drawable/baseline_camera_alt_24"
         android:title="@string/nav_camera" />
     <item

@@ -5,6 +5,7 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Rect
+import android.graphics.Typeface
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
@@ -91,19 +92,29 @@ class CompassFragment : Fragment(), SensorEventListener {
         init{
             setBackgroundColor(Color.BLACK)
         }
-        private val textPaint = Paint().apply {
+
+        private val rectPaint = Paint().apply {
             isAntiAlias = true
-            strokeWidth = 2f
-            textSize = 50f
+            strokeWidth = 1f
+            textSize = 200f
             style = Paint.Style.STROKE
             color = Color.WHITE
+        }
+        private val fontType: Typeface = Typeface.create("sans-serif",Typeface.NORMAL)
+        private val textPaint = Paint().apply {
+            isAntiAlias = true
+            strokeWidth = 1f
+            textSize = 200f
+            style = Paint.Style.FILL
+            color = Color.WHITE
+            typeface = fontType
         }
 
         private val linePaint = Paint().apply {
             isAntiAlias = true
-            strokeWidth = 10f
+            strokeWidth = 30f
             style = Paint.Style.STROKE
-            color = Color.WHITE
+            color = Color.RED
         }
 
         private var position = 0f
@@ -117,11 +128,9 @@ class CompassFragment : Fragment(), SensorEventListener {
 
             val radius = measuredWidth * 0.75f / 2f
 
-            // Draw the compass labels using the textPaint object
-            canvas.drawRect(0f, 0f, measuredWidth.toFloat(), measuredHeight.toFloat(), textPaint)
+            canvas.drawRect(0f, 0f, measuredWidth.toFloat(), measuredHeight.toFloat(), rectPaint)
 
 
-            // Draw the compass image centered on the screen and scaled to fit inside the compass circle
             val scale = (radius * 2) / Math.max(compassBitmap.width, compassBitmap.height)
             val scaledBitmap = Bitmap.createScaledBitmap(
                 compassBitmap,
@@ -158,35 +167,34 @@ class CompassFragment : Fragment(), SensorEventListener {
             val textBounds = Rect()
 
 
-            // Draw the current degree at the bottom of the page using the textPaint object
             var currentDirection = "";
 
             position = (position -360).absoluteValue;
             if(position >0 && position < 90){
-                currentDirection = "東北"
+                currentDirection = "North-East"
             }else if(position>90 && position <180){
-                currentDirection = "東南"
+                currentDirection = "South-East"
             } else if( position >180 && position < 270){
-                currentDirection = "西南"
+                currentDirection = "South-West"
             }else if( position > 270 && position < 360){
-                currentDirection = "西北"
+                currentDirection = "North-West"
             }else if(position == 0f){
-                currentDirection = "北";
+                currentDirection = "North";
             }else if(position == 90f){
-                currentDirection = "東";
+                currentDirection = "East";
             }else if(position == 180f){
-                currentDirection = "南";
+                currentDirection = "South";
             }else if(position == 270f){
-                currentDirection = "西";
+                currentDirection = "West";
             }
-            var displayDirectionString = "現在面向: "+currentDirection
+            var displayDirectionString = currentDirection
             textPaint.getTextBounds(displayDirectionString, 0, displayDirectionString.length, textBounds)
 
             val x = (measuredWidth - textBounds.width()) / 2f - 20f
-            val y = measuredHeight - textBounds.height() - 50f
-            canvas.drawText(displayDirectionString, x, y, textPaint)
+            val y = measuredHeight - textBounds.height() - 100f
+            canvas.drawText(displayDirectionString , x, y, textPaint)
 
-            canvas.drawText(position.toInt().toString(), x, measuredHeight - 50f, textPaint)
+            canvas.drawText(position.toInt().toString()+"° ", x, measuredHeight - 50f, textPaint)
         }
 
         fun updateData(position: Float) {
