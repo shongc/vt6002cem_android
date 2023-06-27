@@ -15,7 +15,7 @@
     <string name="title_notifications">Notifications</string>
     <string name="nav_home">Home</string>
     <string name="nav_maps">Maps</string>
-    <string name="nav_camera">Camera</string>
+    <string name="nav_fs_item">FengShui item</string>
     <string name="nav_compass">Compass</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="title_maps">Haunted House Maps</string>
