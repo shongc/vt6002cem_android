@@ -12,7 +12,6 @@ class StartActivity : AppCompatActivity() {
         val intent = Intent(this@StartActivity, BottomNavigation::class.java)
         startActivity(intent)
 
-
         setContentView(R.layout.activity_bottom_navigation)
     }
     override fun onCreate(savedInstanceState: Bundle?) {
